@@ -1,0 +1,141 @@
+[
+  {
+    "id": 1,
+    "tourType": "Hiking",
+    "tripTitle": "Mountain Adventure in Italy",
+    "image": "https://i.ibb.co.com/qyQxM7t/destination1.jpg",
+    "description": "Explore breathtaking alpine landscapes, hike through scenic trails, and experience the tranquility of nature on this challenging yet rewarding mountain adventure.",
+    "price": 3500,
+    "duration": "5 days",
+    "dailyActivities": [
+      "Day 1: Arrival and orientation",
+      "Day 2: Moderate hike to Lake Viewpoint",
+      "Day 3: Challenging summit hike",
+      "Day 4: Exploration of hidden waterfalls",
+      "Day 5: Departure"
+    ]
+  },
+
+  {
+    "id": 2,
+    "tourType": "Sports",
+    "tripTitle": "Coastal Surf Camp in Bali",
+    "image": "https://i.ibb.co.com/jMjFj4M/destination2.jpg",
+    "description": "Join our surf camp on the beautiful coastline of Bali, where expert instructors will guide you through surf lessons while you enjoy the sun and sea.",
+    "price": 4000,
+    "duration": "4 days",
+    "dailyActivities": [
+      "Day 1: Introduction and surf basics",
+      "Day 2: Morning surf lesson and beach games",
+      "Day 3: Advanced surf techniques and coastal hike",
+      "Day 4: Departure"
+    ]
+  },
+  {
+    "id": 3,
+    "tourType": "Walking",
+    "tripTitle": "Historic City Walk in Rome",
+    "image": "https://i.ibb.co.com/VSVPLs3/destination3.jpg",
+    "description": "Discover the rich history of Rome as you stroll through iconic landmarks, cultural sites, and local neighborhoods with a knowledgeable guide.",
+    "price": 1500,
+    "duration": "4 days",
+    "dailyActivities": [
+      "Day 1: City center and historical landmarks",
+      "Day 2: Visit to Vatican Museums",
+      "Day 3: Local markets and neighborhoods",
+      "Day 4: Departure"
+    ]
+  },
+  {
+    "id": 4,
+    "tourType": "Wildlife",
+    "tripTitle": "Safari Wilderness Expedition in Kenya",
+    "image": "https://i.ibb.co.com/tcQsJr6/destination4.jpg",
+    "description": "Embark on an unforgettable safari experience in Kenya, observing diverse wildlife in their natural habitats, from elephants to big cats and exotic birds.",
+    "price": 1200,
+    "duration": "5 days",
+    "dailyActivities": [
+      "Day 1: Arrival and safari briefing",
+      "Day 2: Early morning game drive",
+      "Day 3: Full-day safari with picnic lunch",
+      "Day 4: Birdwatching and nature walks",
+      "Day 5: Departure"
+    ]
+  },
+  {
+    "id": 5,
+    "tourType": "Air Rides",
+    "tripTitle": "Hot Air Balloon Over Cappadocia",
+    "image": "https://i.ibb.co.com/NCc0jhQ/destination5.jpg",
+    "description": "Experience the serene beauty of Cappadocia from above in a hot air balloon, followed by cultural explorations on the ground.",
+    "price": 6000,
+    "duration": "4 days",
+    "dailyActivities": [
+      "Day 1: Arrival and orientation",
+      "Day 2: Hot air balloon ride at sunrise",
+      "Day 3: Guided tour of local caves and valleys",
+      "Day 4: Departure"
+    ]
+  },
+  {
+    "id": 6,
+    "tourType": "Cultural",
+    "tripTitle": "Temples and Traditions in Kyoto",
+    "image": "https://i.ibb.co.com/d2tCvXL/destination6.jpg",
+    "description": "Immerse yourself in the ancient traditions and spiritual essence of Kyoto through guided temple visits and traditional ceremonies.",
+    "price": 5000,
+    "duration": "4 days",
+    "dailyActivities": [
+      "Day 1: Temple tour and spiritual introduction",
+      "Day 2: Traditional tea ceremony and workshops",
+      "Day 3: Visit to Kyoto's cultural landmarks",
+      "Day 4: Departure"
+    ]
+  },
+  {
+    "id": 7,
+    "tourType": "Cruise",
+    "tripTitle": "Mediterranean Island Cruise from Greece",
+    "image": "https://i.ibb.co.com/jWqZ93B/destination7.jpg",
+    "description": "Sail across the Mediterranean Sea from Greece, visiting stunning islands, historic ports, and hidden beaches, with leisure activities aboard the ship.",
+    "price": 2200,
+    "duration": "5 days",
+    "dailyActivities": [
+      "Day 1: Departure from Athens",
+      "Day 2: Explore Mykonos island",
+      "Day 3: Visit Santorini and local beaches",
+      "Day 4: Relax on board and enjoy ship activities",
+      "Day 5: Return to Athens and departure"
+    ]
+  },
+  {
+    "id": 8,
+    "tourType": "Adventure",
+    "tripTitle": "Jungle Exploration in the Amazon",
+    "image": "https://i.ibb.co.com/f8ZL3SP/destination8.jpg",
+    "description": "Venture deep into the Amazon jungle, discovering hidden waterfalls, wildlife, and remote villages, while learning survival skills along the way.",
+    "price": 7000,
+    "duration": "4 days",
+    "dailyActivities": [
+      "Day 1: Arrival and jungle trek",
+      "Day 2: Canoe ride and wildlife spotting",
+      "Day 3: Survival skills workshop",
+      "Day 4: Departure"
+    ]
+  },
+  {
+    "id": 9,
+    "tourType": "Relaxation",
+    "tripTitle": "Luxury Spa Retreat in the Maldives",
+    "image": "https://i.ibb.co.com/yqvZr52/destination9.jpg",
+    "description": "Unwind and rejuvenate at a luxurious spa retreat in the Maldives, surrounded by nature, offering wellness treatments, yoga, and relaxation therapies.",
+    "price": 1500,
+    "duration": "4 days",
+    "dailyActivities": [
+      "Day 1: Arrival and welcome massage",
+      "Day 2: Yoga and full-day spa treatments",
+      "Day 3: Meditation, nature walk, and relaxation",
+      "Day 4: Departure"
+    ]
+  }
+]
