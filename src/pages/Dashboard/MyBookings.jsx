@@ -65,7 +65,16 @@ const MyBookings = () => {
                 <th>{index + 1} </th>
                 <td>{booking.tripTitle}</td>
                 <td>{booking.guide_name}</td>
-                <td>{booking.date}</td>
+                <td>
+                  {/* {booking.date} */}
+                  {String(new Date(booking.date).getDate()).padStart(2, "0")}-
+                  {String(new Date(booking.date).getMonth() + 1).padStart(
+                    2,
+                    "0"
+                  )}
+                  -{new Date(booking.date).getFullYear()}
+                </td>
+
                 <td>${booking.price}</td>
                 <td>{booking.status}</td>
                 <td>

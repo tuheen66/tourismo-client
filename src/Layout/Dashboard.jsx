@@ -57,6 +57,7 @@ const Dashboard = () => {
                         color: isActive ? "White" : "#374177",
                         padding: "8px 12px",
                         viewTransitionName: isTransitioning ? "slide" : "",
+                        borderRadius: isActive ? "5px" : "",
                       };
                     }}
                   >
@@ -75,6 +76,7 @@ const Dashboard = () => {
                         color: isActive ? "White" : "#374177",
                         padding: "8px 12px",
                         viewTransitionName: isTransitioning ? "slide" : "",
+                        borderRadius: isActive ? "5px" : "",
                       };
                     }}
                   >
@@ -92,6 +94,7 @@ const Dashboard = () => {
                         color: isActive ? "White" : "#374177",
                         padding: "8px 12px",
                         viewTransitionName: isTransitioning ? "slide" : "",
+                        borderRadius: isActive ? "5px" : "",
                       };
                     }}
                   >
@@ -147,8 +150,6 @@ const Dashboard = () => {
                   </NavLink>
                 </li>
 
-               
-
                 <br />
                 <hr />
                 <br />
@@ -156,8 +157,7 @@ const Dashboard = () => {
             </>
           ) : (
             <>
-
-            {/* tourist routes */}
+              {/* tourist routes */}
               <h2 className="text-xl font-semibold mb-4">Tourist Dashboard</h2>
               <ul className="space-y-8">
                 <li className="">
@@ -171,6 +171,7 @@ const Dashboard = () => {
                         color: isActive ? "White" : "#374177",
                         padding: "8px 12px",
                         viewTransitionName: isTransitioning ? "slide" : "",
+                        borderRadius: isActive ? "5px" : "",
                       };
                     }}
                   >
@@ -189,12 +190,33 @@ const Dashboard = () => {
                         color: isActive ? "White" : "#374177",
                         padding: "8px 12px",
                         viewTransitionName: isTransitioning ? "slide" : "",
+                        borderRadius: isActive ? "5px" : "",
                       };
                     }}
                   >
                     My Bookings
                   </NavLink>
                 </li>
+
+                <li className="">
+                  <NavLink
+                    to="/dashboard/my-wishlist"
+                    style={({ isActive, isTransitioning }) => {
+                      return {
+                        fontWeight: isActive ? "bold" : "",
+                        backgroundColor: isActive ? "#d35400" : "",
+                        textDecorationColor: isActive ? "#a9106b" : "none",
+                        color: isActive ? "White" : "#374177",
+                        padding: "8px 12px",
+                        viewTransitionName: isTransitioning ? "slide" : "",
+                        borderRadius: isActive ? "5px" : "",
+                      };
+                    }}
+                  >
+                    My Wishlist
+                  </NavLink>
+                </li>
+
                 <li className="">
                   <NavLink
                     to="/dashboard/guide-request"
@@ -206,6 +228,7 @@ const Dashboard = () => {
                         color: isActive ? "White" : "#374177",
                         padding: "8px 12px",
                         viewTransitionName: isTransitioning ? "slide" : "",
+                        borderRadius: isActive ? "5px" : "",
                       };
                     }}
                   >
@@ -240,8 +263,6 @@ const Dashboard = () => {
               </NavLink>
             </li>
           </ul>
-
-          
         </div>
       </div>
       <div className="flex-1">

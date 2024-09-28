@@ -20,6 +20,9 @@ import GuideProfile from "../pages/Dashboard/GuidesPages/GuideProfile";
 import TourGuideProfile from "../pages/TourGuideProfile";
 import MyBookings from "../pages/Dashboard/MyBookings";
 import AssignedTours from "../pages/Dashboard/GuidesPages/AssignedTours";
+import MyWishlist from "../pages/Dashboard/MyWishlist";
+import TourType from "../pages/Dashboard/TourType";
+
 
 export const router = createBrowserRouter([
   {
@@ -71,6 +74,12 @@ export const router = createBrowserRouter([
         loader: ({ params }) =>
           fetch(`http://localhost:5000/guides/${params.id}`),
       },
+      {
+        path: "/tour-type/:tourType",
+        element: <TourType></TourType>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/package/${params.tourType}`),
+      },
     ],
   },
   {
@@ -99,6 +108,10 @@ export const router = createBrowserRouter([
       {
         path: "my-bookings",
         element: <MyBookings></MyBookings>,
+      },
+      {
+        path: "my-wishlist",
+        element: <MyWishlist></MyWishlist>,
       },
 
       {

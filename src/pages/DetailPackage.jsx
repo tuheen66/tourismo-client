@@ -129,8 +129,10 @@ const DetailPackage = () => {
                 <span className="font-semibold">Daily Activities :</span>
               </p>
               <ul>
-                {dailyActivities.map((item) => (
-                  <li className="mb-3">{item}</li>
+                {dailyActivities?.map((item, index) => (
+                  <li key={index} className="mb-3">
+                    {item}
+                  </li>
                 ))}
               </ul>
             </div>
@@ -301,7 +303,12 @@ const DetailPackage = () => {
 
       <>
         {/* <Button onClick={() => setOpenModal(true)}>Toggle modal</Button> */}
-        <Modal className="w-1/2 mx-auto mt-24" dismissible show={openModal} onClose={() => setOpenModal(false)}>
+        <Modal
+          className="w-1/2 mx-auto mt-24"
+          dismissible
+          show={openModal}
+          onClose={() => setOpenModal(false)}
+        >
           <Modal.Body>
             <h2 className="text-3xl font-bold text-center ">
               Booking Successful, <br /> Go to My Bookings page

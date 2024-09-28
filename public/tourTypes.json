@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "image": "https://i.ibb.co.com/N2GmkYt/adventure.jpg",
+    "tourType": "Adventure"
+  },
+  {
+    "id": 2,
+    "image": "https://i.ibb.co.com/W3pB60S/air-ride.jpg",
+    "tourType": "Air Rides"
+  },
+  {
+    "id": 3,
+    "image": "https://i.ibb.co.com/2vZGtwg/cruise.jpg",
+    "tourType": "Cruise"
+  },
+  {
+    "id": 4,
+    "image": "https://i.ibb.co.com/k8rg4Cy/hiking.jpg",
+    "tourType": "Hiking"
+  },
+  {
+    "id": 5,
+    "image": "https://i.ibb.co.com/XZzS46m/relaxation.jpg",
+    "tourType": "Relaxation"
+  },
+  {
+    "id": 6,
+    "image": "https://i.ibb.co.com/jM9kqzh/sports.jpg",
+    "tourType": "Sports"
+  },
+  {
+    "id": 7,
+    "image": "https://i.ibb.co.com/sKQ0VhT/walking.jpg",
+    "tourType": "Walking"
+  },
+  {
+    "id": 8,
+    "image": "https://i.ibb.co.com/dmd5Msy/wildlife.jpg",
+    "tourType": "Wildlife"
+  },
+  {
+    "id": 9,
+    "image": "https://i.ibb.co.com/sW1wzW8/cultural.jpg",
+    "tourType": "Cultural"
+  }
+]
