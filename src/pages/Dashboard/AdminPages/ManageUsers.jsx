@@ -1,27 +1,33 @@
 import { useQuery } from "@tanstack/react-query";
 import useAxiosPublic from "../../../hooks/useAxiosPublic";
 import Swal from "sweetalert2";
+import useAuth from "../../../hooks/useAuth";
 
 const ManageUsers = () => {
+  const { user } = useAuth();
   const axiosPublic = useAxiosPublic();
 
   const { data: users = [], refetch } = useQuery({
     queryKey: ["users"],
     queryFn: async () => {
-      const res = await axiosPublic.get("/user");
+      const res = await axiosPublic.get("/user", {
+        headers: {
+          authorization: `Bearer ${localStorage.getItem("access-token")}`,
+        },
+      });
       return res.data;
     },
   });
 
-  const handleMakeAdmin = (user) => {
-    axiosPublic.patch(`/user/admin/${user._id}`).then((res) => {
+  const handleMakeAdmin = (currentUser) => {
+    axiosPublic.patch(`/user/admin/${currentUser._id}`).then((res) => {
       console.log(res.data);
       refetch();
       if (res.data.modifiedCount > 0) {
         Swal.fire({
           position: "top-end",
           icon: "success",
-          title: `${user.name} is made an Admin`,
+          title: `${currentUser.name} is made an Admin`,
           showConfirmButton: false,
           timer: 1500,
         });
@@ -29,15 +35,15 @@ const ManageUsers = () => {
     });
   };
 
-  const handleMakeGuide = (user) => {
-    axiosPublic.patch(`/user/guide/${user._id}`).then((res) => {
+  const handleMakeGuide = (currentUser) => {
+    axiosPublic.patch(`/user/guide/${currentUser._id}`).then((res) => {
       console.log(res.data);
       refetch();
       if (res.data.modifiedCount > 0) {
         Swal.fire({
           position: "top-end",
           icon: "success",
-          title: `${user.name} is made a Tour Guide`,
+          title: `${currentUser.name} is made a Tour Guide`,
           showConfirmButton: false,
           timer: 1500,
         });
@@ -62,15 +68,15 @@ const ManageUsers = () => {
             </tr>
           </thead>
           <tbody>
-            {users.map((user, index) => (
-              <tr key={user._id}>
+            {users.map((currentUser, index) => (
+              <tr key={currentUser._id}>
                 <th>{index + 1}</th>
                 <td>
                   <div className="flex items-center gap-3">
                     <div className="avatar">
                       <div className="mask h-16 w-16">
                         <img
-                          src={user.image}
+                          src={currentUser.image}
                           alt="Avatar Tailwind CSS Component"
                         />
                       </div>
@@ -78,31 +84,52 @@ const ManageUsers = () => {
                   </div>
                 </td>
                 <td>
-                  {user.name}
+                  {currentUser.name}
                   <br />
                 </td>
 
-                <td>{user.email}</td>
-                <td>{user.guide_request}</td>
+                <td>{currentUser.email}</td>
+                <td>{currentUser.guide_request}</td>
 
-                <th className="capitalize">{user.role}</th>
+                <th className="capitalize">{currentUser.role}</th>
 
                 <td>
-                  <div className="join join-vertical">
-                    <button
-                      onClick={() => handleMakeAdmin(user)}
-                      className="btn join-item bg-slate-500 text-white"
-                    >
-                      Make Admin
-                    </button>
+                  {currentUser.role === "admin" ||
+                  currentUser.role === "guide" ? (
+                    <div className="join join-vertical">
+                      <button
+                        disabled
+                        onClick={() => handleMakeAdmin(currentUser)}
+                        className="btn join-item bg-slate-500 text-white"
+                      >
+                        Make Admin
+                      </button>
 
-                    <button
-                      onClick={() => handleMakeGuide(user)}
-                      className="btn join-item bg-orange-500 text-white"
-                    >
-                      Make Guide
-                    </button>
-                  </div>
+                      <button
+                        disabled
+                        onClick={() => handleMakeGuide(currentUser)}
+                        className="btn join-item bg-orange-500 text-white"
+                      >
+                        Make Guide
+                      </button>
+                    </div>
+                  ) : (
+                    <div className="join join-vertical">
+                      <button
+                        onClick={() => handleMakeAdmin(currentUser)}
+                        className="btn join-item bg-slate-500 text-white"
+                      >
+                        Make Admin
+                      </button>
+
+                      <button
+                        onClick={() => handleMakeGuide(currentUser)}
+                        className="btn join-item bg-orange-500 text-white"
+                      >
+                        Make Guide
+                      </button>
+                    </div>
+                  )}
                 </td>
               </tr>
             ))}

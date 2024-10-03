@@ -187,11 +187,12 @@ const Navbar = () => {
           <>
             <div className=" navbar-end ">
               <div className="  dropdown dropdown-end">
+               
                 <div tabIndex={0} className="m-1 ">
                   <img
                     className="w-16 rounded-full"
                     src={user?.photoURL}
-                    alt=""
+                    alt="Image"
                   />
                 </div>
                 <ul

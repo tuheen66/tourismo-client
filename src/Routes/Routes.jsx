@@ -22,7 +22,7 @@ import MyBookings from "../pages/Dashboard/MyBookings";
 import AssignedTours from "../pages/Dashboard/GuidesPages/AssignedTours";
 import MyWishlist from "../pages/Dashboard/MyWishlist";
 import TourType from "../pages/Dashboard/TourType";
-
+import PrivateRoute from "./PrivateRoute";
 
 export const router = createBrowserRouter([
   {
@@ -84,7 +84,11 @@ export const router = createBrowserRouter([
   },
   {
     path: "dashboard",
-    element: <Dashboard></Dashboard>,
+    element: (
+      <PrivateRoute>
+        <Dashboard></Dashboard>
+      </PrivateRoute>
+    ),
     children: [
       {
         path: "admin-profile",

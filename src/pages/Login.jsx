@@ -2,11 +2,13 @@ import React, { useContext } from "react";
 import Button from "../components/Button";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
+import Swal from "sweetalert2";
+import GoogleSignIn from "../components/GoogleSignIn";
 
 const Login = () => {
   const { signIn } = useContext(AuthContext);
-  const navigate = useNavigate();
 
+  const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
 
@@ -22,11 +24,24 @@ const Login = () => {
     signIn(email, password)
       .then((result) => {
         console.log(result.user);
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Login successful",
+          showConfirmButton: false,
+          timer: 1500,
+        });
 
         navigate(from, { replace: true });
       })
       .catch((error) => {
         console.log(error);
+        Swal.fire({
+          title: "Ooops!",
+          text: "Please provide valid email and correct password",
+          icon: "error",
+          confirmButtonText: "Oh no!",
+        });
       });
   };
 
@@ -71,6 +86,12 @@ const Login = () => {
           </div>
 
           <Button text="Sign In" type="submit"></Button>
+
+          <div className="flex gap-2 items-center">
+        <p>Sign in with </p>
+        <GoogleSignIn></GoogleSignIn>
+        
+      </div>
 
           <div className="text-sm font-medium text-gray-500 dark:text-gray-300">
             Not registered?{" "}

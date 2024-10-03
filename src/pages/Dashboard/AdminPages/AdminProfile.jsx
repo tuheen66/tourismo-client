@@ -20,7 +20,7 @@ const AdminProfile = () => {
   return (
     <div className="ml-20  flex flex-col space-y-4 items-center w-[50%]">
       <h2 className="text-2xl font-bold mb-8 mt-12">My Profile</h2>
-      <img className="w-40" src={users.image} alt="" />
+      <img className="w-40" src={users.image || user.photoURL} alt="" />
       <p className="text-lg">
         <span className="font-semibold ">Name : </span>
         {users.name}

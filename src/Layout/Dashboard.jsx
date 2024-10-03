@@ -3,9 +3,11 @@ import { useQuery } from "@tanstack/react-query";
 import useAxiosPublic from "../hooks/useAxiosPublic";
 import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
+import useAdmin from "../hooks/useAdmin";
 
 const Dashboard = () => {
   const { user } = useContext(AuthContext);
+  const [isAdmin] = useAdmin();
 
   const axiosPublic = useAxiosPublic();
 
@@ -17,11 +19,11 @@ const Dashboard = () => {
     },
   });
 
-  const adminUsers = users.filter((user) => user.role === "admin");
+  // const adminUsers = users.filter((user) => user.role === "admin");
 
-  const adminUserEmails = adminUsers.map((userEmail) => userEmail.email);
+  // const adminUserEmails = adminUsers.map((userEmail) => userEmail.email);
 
-  const isAdmin = adminUserEmails.includes(user?.email);
+  // const isAdmin = adminUserEmails.includes(user?.email);
 
   // find tour guides
 
@@ -101,9 +103,8 @@ const Dashboard = () => {
                     Manage Users
                   </NavLink>
                 </li>
-                <br />
-                <hr />
-                <br />
+
+                <div className="divider"></div>
               </ul>
             </>
           ) : isGuide ? (
@@ -150,9 +151,7 @@ const Dashboard = () => {
                   </NavLink>
                 </li>
 
-                <br />
-                <hr />
-                <br />
+                <div className="divider"></div>
               </ul>
             </>
           ) : (
@@ -236,9 +235,7 @@ const Dashboard = () => {
                   </NavLink>
                 </li>
 
-                <br />
-                <hr />
-                <br />
+                <div className="divider"></div>
               </ul>
             </>
           )}

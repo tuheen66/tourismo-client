@@ -7,6 +7,7 @@ import { AuthContext } from "../providers/AuthProvider";
 import { updateProfile } from "firebase/auth";
 import useAxiosPublic from "../hooks/useAxiosPublic";
 import Swal from "sweetalert2";
+import GoogleSignIn from "../components/GoogleSignIn";
 
 const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
 const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`;
@@ -162,7 +163,12 @@ const Register = () => {
         <Button text="Sign Up" type="submit"></Button>
         <button type="submit" />
       </form>
-      <div className="text-sm font-medium text-gray-500 dark:text-gray-300">
+      <div className="flex gap-2 items-center">
+        <p>Sign in with </p>
+        
+        <GoogleSignIn></GoogleSignIn>
+      </div>
+      <div className="text-sm font-medium text-gray-500 dark:text-gray-300 mt-4">
         Already have an account? {""}
         <Link
           to="/login"
