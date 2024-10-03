@@ -12,7 +12,7 @@ const ContactUs = () => {
       
       {/* Hero Section */}
       <section
-        className="w-full h-96 bg-cover bg-center flex items-center justify-center rounded-xl"
+        className="w-full min-h-[200px] md:min-h-[300px] lg:min-h-[450px] bg-cover bg-center flex items-center justify-center rounded-xl"
         style={{ backgroundImage: `url(${contact})` }}
       >
         <div className="p-8 rounded">

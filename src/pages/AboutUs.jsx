@@ -6,12 +6,24 @@ import icon4 from "../assets/images/icon4.png"
 import icon5 from "../assets/images/icon5.png"
 import icon6 from "../assets/images/icon6.png"
 import mission from "../assets/images/mission.jpg"
+import about from '../assets/images/about.jpg'
 
 
 const AboutUs = () => {
   return (
     <div>
-      <h2 className="text-2xl">About Us</h2>
+       <div
+        className="mx-auto min-h-[200px] md:min-h-[300px] lg:min-h-[450px] rounded-xl bg-cover bg-center"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${about})`,
+        }}
+      >
+        <div className="flex justify-center ">
+          <h2 className=" text-3xl md:text-4xl lg:text-5xl text-center font-bold text-white items-center my-20 md:my-40 lg:my-52">
+            About Us
+          </h2>
+        </div>
+      </div>
       <section className="bg-gray-100 py-12">
         <div className="container mx-auto px-4">
           {/* Section 1: Introduction */}
@@ -185,7 +197,7 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
-      );
+      
     </div>
   );
 };

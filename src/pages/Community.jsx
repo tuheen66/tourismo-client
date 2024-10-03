@@ -19,10 +19,29 @@ import community from "../assets/images/community.jpg";
 const Community = () => {
   return (
     <div>
-      <section
-        className="bg-cover bg-center h-screen rounded-xl"
+      <div
+        className="mx-auto min-h-[200px] md:min-h-[300px] lg:min-h-[450px]  bg-cover bg-center rounded-xl"
         style={{
-          backgroundImage: ` url(${community})`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(${community})`,
+        }}
+      >
+        <div className="bg-black bg-opacity-40  min-h-[200px] md:min-h-[300px] lg:min-h-[450px] flex flex-col justify-center items-center rounded-xl text-center text-white px-4 ">
+          <h2 className="text-4xl md:text-5xl font-semibold mb-4">
+            Welcome to Our Travel Family
+          </h2>
+          <p className="text-lg md:text-2xl mb-6">
+            Connect, Share, and Explore with Fellow Travelers and Guides
+          </p>
+          <button className="bg-orange-600 text-white py-3 px-6 rounded-full font-semibold hover:bg-blue-700">
+            Join the Adventure
+          </button>
+        </div>
+      </div>
+
+      {/* <section
+        className="bg-cover bg-center h-screen min-h-[200px] md:min-h-[300px] lg:min-h-[450px] rounded-xl"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${community})`,
         }}
       >
         <div className="bg-black bg-opacity-40 h-full flex flex-col justify-center items-center rounded-xl text-center text-white px-4">
@@ -36,7 +55,7 @@ const Community = () => {
             Join the Adventure
           </button>
         </div>
-      </section>
+      </section> */}
 
       <main className="my-12 px-4">
         {/* Introduction */}
