@@ -18,7 +18,7 @@ const PackagesCard = ({ destination }) => {
     price,
     image,
     duration,
-    email: user.email,
+    email: user?.email,
     tripId: _id,
   };
 

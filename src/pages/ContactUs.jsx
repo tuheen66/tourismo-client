@@ -15,18 +15,18 @@ const ContactUs = () => {
         className="w-full min-h-[200px] md:min-h-[300px] lg:min-h-[450px] bg-cover bg-center flex items-center justify-center rounded-xl"
         style={{ backgroundImage: `url(${contact})` }}
       >
-        <div className="p-8 rounded">
-          <h1 className="text-4xl text-white font-bold mb-2">Get In Touch With Us!</h1>
+        <div className="p-8 rounded text-center">
+          <h1 className="text-3xl md:text-4xl text-white font-bold mb-2">Get In Touch With Us!</h1>
           <p className="text-lg text-gray-300">We're here to help you with all your tour inquiries.</p>
         </div>
       </section>
 
       {/* Main Content */}
       <div className="container mx-auto px-4 py-12">
-        <div className="flex flex-col lg:flex-row  gap-20">
+        <div className="flex flex-col md:flex-row  gap-20">
           
           {/* Contact Form */}
-          <div className="lg:w-1/2">
+          <div className="md:w-1/2">
             <h2 className="text-2xl font-semibold mb-6">Send Us a Message</h2>
             <form className="space-y-4">
               <div>
@@ -84,7 +84,7 @@ const ContactUs = () => {
           </div>
 
           {/* Contact Information */}
-          <div className="lg:w-1/2 mt-12 lg:mt-0 ml-28">
+          <div className="md:w-1/2 mt-12 lg:mt-0 lg:ml-28">
             <h2 className="text-2xl font-semibold mb-6">Contact Information</h2>
             <ul className="space-y-4">
               <li>

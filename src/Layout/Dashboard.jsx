@@ -39,16 +39,16 @@ const Dashboard = () => {
   const isGuide = guideEmails.includes(user?.email);
 
   return (
-    <div className="flex">
-      <div className="min-h-screen w-64 bg-blue-300">
+    <div className="flex flex-col lg:flex-row">
+      <div className="lg:min-h-screen lg:w-64 bg-blue-300">
         <div className="px-4 mt-4">
           {/* admin dashboard */}
 
           {isAdmin ? (
             <>
               <h2 className="text-xl font-semibold mb-4">Admin Dashboard</h2>
-              <ul>
-                <li className="mb-4">
+              <ul className="lg:space-y-2 flex lg:flex-col items-center lg:items-start">
+                <li className="mb-4 flex">
                   <NavLink
                     to="/dashboard/admin-profile"
                     style={({ isActive, isTransitioning }) => {
@@ -67,7 +67,7 @@ const Dashboard = () => {
                   </NavLink>
                 </li>
 
-                <li className="mb-4">
+                <li className="mb-4 flex">
                   <NavLink
                     to="/dashboard/add-packages"
                     style={({ isActive, isTransitioning }) => {
@@ -85,7 +85,7 @@ const Dashboard = () => {
                     Add Packages
                   </NavLink>
                 </li>
-                <li className="mb-4">
+                <li className="mb-4 flex">
                   <NavLink
                     to="/dashboard/manage-users"
                     style={({ isActive, isTransitioning }) => {
@@ -112,7 +112,7 @@ const Dashboard = () => {
               <h2 className="text-xl font-semibold mb-4">
                 Tour Guide Dashboard
               </h2>
-              <ul className="space-y-8">
+              <ul className="lg:space-y-8 flex lg:flex-col items-center lg:items-start">
                 <li className="">
                   <NavLink
                     to="/dashboard/guide-profile"
@@ -158,8 +158,8 @@ const Dashboard = () => {
             <>
               {/* tourist routes */}
               <h2 className="text-xl font-semibold mb-4">Tourist Dashboard</h2>
-              <ul className="space-y-8">
-                <li className="">
+              <ul className="lg:space-y-8 flex lg:flex-col items-center lg:items-start ">
+                <li className="flex">
                   <NavLink
                     to="/dashboard/my-profile"
                     style={({ isActive, isTransitioning }) => {
@@ -178,7 +178,7 @@ const Dashboard = () => {
                   </NavLink>
                 </li>
 
-                <li className="">
+                <li className="flex">
                   <NavLink
                     to="/dashboard/my-bookings"
                     style={({ isActive, isTransitioning }) => {
@@ -197,7 +197,7 @@ const Dashboard = () => {
                   </NavLink>
                 </li>
 
-                <li className="">
+                <li className="flex">
                   <NavLink
                     to="/dashboard/my-wishlist"
                     style={({ isActive, isTransitioning }) => {
@@ -216,7 +216,7 @@ const Dashboard = () => {
                   </NavLink>
                 </li>
 
-                <li className="">
+                <li className="flex mx-2">
                   <NavLink
                     to="/dashboard/guide-request"
                     style={({ isActive, isTransitioning }) => {
@@ -241,7 +241,7 @@ const Dashboard = () => {
           )}
 
           <ul>
-            <li>
+            <li className="flex">
               <NavLink
                 to="/"
                 style={({ isActive, isTransitioning }) => {

@@ -25,8 +25,8 @@ const Community = () => {
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(${community})`,
         }}
       >
-        <div className="bg-black bg-opacity-40  min-h-[200px] md:min-h-[300px] lg:min-h-[450px] flex flex-col justify-center items-center rounded-xl text-center text-white px-4 ">
-          <h2 className="text-4xl md:text-5xl font-semibold mb-4">
+        <div className="bg-black bg-opacity-40  min-h-[250px] md:min-h-[350px] lg:min-h-[450px] flex flex-col justify-center items-center rounded-xl text-center text-white px-4 ">
+          <h2 className=" text-3xl md:text-5xl font-semibold mb-4">
             Welcome to Our Travel Family
           </h2>
           <p className="text-lg md:text-2xl mb-6">
@@ -75,7 +75,7 @@ const Community = () => {
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {/* Member 1 */}
-            <div className="bg-white p-6 shadow-md rounded-lg text-center">
+            <div className="bg-white p-6 rounded-lg text-center border-2 border-slate-300 shadow-xl shadow-slate-400">
               <img
                 src={img1}
                 alt="Alice Johnson"
@@ -109,7 +109,7 @@ const Community = () => {
             </div>
 
             {/* Member 2 */}
-            <div className="bg-white p-6 shadow-md rounded-lg text-center">
+            <div className="bg-white p-6  rounded-lg text-center border-2 border-slate-300 shadow-xl shadow-slate-400">
               <img
                 src={img3}
                 alt="Mark Lee"
@@ -143,7 +143,7 @@ const Community = () => {
             </div>
 
             {/* Add more member profiles as needed */}
-            <div className="bg-white p-6 shadow-md rounded-lg text-center">
+            <div className="bg-white p-6  rounded-lg text-center border-2 border-slate-300 shadow-xl shadow-slate-400">
               <img
                 src={img4}
                 alt="Sophia Martinez"
@@ -176,7 +176,7 @@ const Community = () => {
               </div>
             </div>
 
-            <div className="bg-white p-6 shadow-md rounded-lg text-center">
+            <div className="bg-white p-6  rounded-lg text-center border-2 border-slate-300 shadow-xl shadow-slate-400">
               <img
                 src={img2}
                 alt="Daniel Kim"
@@ -216,10 +216,10 @@ const Community = () => {
           <h3 className="text-2xl font-semibold mb-6 text-center">
             What’s Happening Next
           </h3>
-          <div className="bg-white p-6 shadow-md rounded-lg">
+          <div className="bg-white lg:p-6 shadow-md rounded-lg">
             <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {/* Event 1 */}
-              <li className="border p-4 rounded-lg hover:shadow-lg transition-shadow">
+              <li className="border p-4 rounded-lg shadow-xl shadow-slate-400 ">
                 <img
                   src={wks1}
                   alt="Mountain Trekking Workshop"
@@ -230,16 +230,11 @@ const Community = () => {
                 </h4>
                 <p className="text-gray-600">📅 October 15, 2024</p>
                 <p className="text-gray-600">📍 Rocky Mountains</p>
-                <a
-                  href="/events/mountain-trekking"
-                  className="text-blue-600 hover:underline"
-                >
-                  Learn More
-                </a>
+                
               </li>
 
               {/* Event 2 */}
-              <li className="border p-4 rounded-lg hover:shadow-lg transition-shadow">
+              <li className="border p-4 rounded-lg shadow-xl shadow-slate-400">
                 <img
                   src={wks2}
                   alt="Cultural Exchange Meetup"
@@ -250,16 +245,11 @@ const Community = () => {
                 </h4>
                 <p className="text-gray-600">📅 November 5, 2024</p>
                 <p className="text-gray-600">📍 Downtown Convention Center</p>
-                <a
-                  href="/events/cultural-exchange"
-                  className="text-blue-600 hover:underline"
-                >
-                  Learn More
-                </a>
+                
               </li>
 
               {/* Add more events as needed */}
-              <li className="border p-4 rounded-lg hover:shadow-lg transition-shadow">
+              <li className="border p-4 rounded-lg shadow-xl shadow-slate-400">
                 <img
                   src={wks3}
                   alt="Photography Walk"
@@ -270,12 +260,7 @@ const Community = () => {
                 </h4>
                 <p className="text-gray-600">📅 December 10, 2024</p>
                 <p className="text-gray-600">📍 City Park</p>
-                <a
-                  href="/events/photography-walk"
-                  className="text-blue-600 hover:underline"
-                >
-                  Learn More
-                </a>
+                
               </li>
             </ul>
           </div>
@@ -288,7 +273,7 @@ const Community = () => {
           </h3>
           <div className="space-y-8">
             {/* Testimonial 1 */}
-            <div className="bg-white p-6 shadow-md rounded-lg flex">
+            <div className="bg-white p-6 shadow-md rounded-lg flex flex-col items-center md:flex-row">
               <img
                 src={mem2}
                 alt="Sarah K."
@@ -305,7 +290,7 @@ const Community = () => {
             </div>
 
             {/* Testimonial 2 */}
-            <div className="bg-white p-6 shadow-md rounded-lg flex">
+            <div className="bg-white p-6 shadow-md rounded-lg flex flex-col items-center md:flex-row">
               <img
                 src={mem1}
                 alt="David M."
@@ -322,7 +307,7 @@ const Community = () => {
             </div>
 
             {/* Add more testimonials as needed */}
-            <div className="bg-white p-6 shadow-md rounded-lg flex">
+            <div className="bg-white p-6 shadow-md rounded-lg flex flex-col items-center md:flex-row">
               <img
                 src={mem3}
                 alt="Emily R."
@@ -345,7 +330,7 @@ const Community = () => {
           <h3 className="text-2xl font-semibold mb-6 text-center">
             Our Travel Moments
           </h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1  md:grid-cols-3 gap-4">
             <img
               src={pic1}
               alt="Sunset at the Beach"

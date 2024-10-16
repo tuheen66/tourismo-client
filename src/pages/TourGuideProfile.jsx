@@ -10,7 +10,7 @@ const TourGuideProfile = () => {
     <div >
       <h2 className="text-2xl text-center font-bold mb-8 mt-12">Profile of {name}</h2>
 
-      <div className="flex justify-between bg-slate-300 p-12 w-[70%] mx-auto rounded-xl mb-12 ">
+      <div className="flex flex-col-reverse gap-8 md:flex-row justify-between bg-slate-300 p-12 lg:w-[70%] mx-auto rounded-xl mb-12 ">
         <div className="space-y-2">
           <p className="text-lg">
             <span className="font-semibold ">Name : </span>

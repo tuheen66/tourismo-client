@@ -14,7 +14,7 @@ const MyProfile = () => {
   const { data: users = [] } = useQuery({
     queryKey: ["users", user?.email],
     queryFn: async () => {
-      const res = await axiosPublic.get(`/users/${user?.email}`);
+      const res = await axiosPublic.get(`/user/${user?.email}`);
       return res.data;
     },
   });
@@ -63,7 +63,7 @@ const MyProfile = () => {
       </div>
 
       {/* story form */}
-      <div className=" w-[50%] mx-auto">
+      <div className="mx-4 md:w-[80%]  lg:w-[50%] md:mx-auto">
         <div className="w-full max-w-xl mx-auto my-12 p-4 bg-slate-300 border border-gray-200  shadow-2xl shadow-slate-600 sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700 rounded-xl ">
           <h5 className="text-2xl font-bold text-gray-700 dark:text-white text-center">
             Add your story

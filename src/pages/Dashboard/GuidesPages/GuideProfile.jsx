@@ -19,10 +19,10 @@ const GuideProfile = () => {
 
   return (
     <div>
-      <div className="ml-20  flex flex-col space-y-4 items-center w-[70%] mb-12 ">
+      <div className="mx-4  justify-center  flex flex-col space-y-4 items-center lg:w-[70%] lg:mx-auto mb-12 ">
         <h2 className="text-2xl font-bold mb-8 mt-12">My Profile</h2>
 
-        <div className="flex justify-between bg-slate-300 p-12 w-full rounded-xl ">
+        <div className="flex flex-col-reverse md:flex-row p-4 gap-4  md:justify-between bg-slate-300 lg:p-12 w-full rounded-xl ">
           <div className="space-y-2">
             <p className="text-lg">
               <span className="font-semibold ">Name : </span>
@@ -69,12 +69,12 @@ const GuideProfile = () => {
               </ul>
             </div>
           </div>
-          <div>
+          <div className="mx-auto">
             <img className="w-72 rounded-xl" src={guide_profile.image} alt="" />
           </div>
         </div>
       </div>
-      <div>
+      <div className="mx-4">
         <AddGuideProfile></AddGuideProfile>
       </div>
     </div>

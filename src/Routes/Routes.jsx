@@ -63,14 +63,23 @@ export const router = createBrowserRouter([
       },
       {
         path: "/detail-package/:id",
-        element: <DetailPackage></DetailPackage>,
+        element: (
+          <PrivateRoute>
+            <DetailPackage></DetailPackage>
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
           fetch(`http://localhost:5000/packages/${params.id}`),
       },
 
       {
         path: "/tour-guide-profile/:id",
-        element: <TourGuideProfile></TourGuideProfile>,
+        element: (
+          <PrivateRoute>
+            {" "}
+            <TourGuideProfile></TourGuideProfile>
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
           fetch(`http://localhost:5000/guides/${params.id}`),
       },

@@ -46,7 +46,7 @@ const MyBookings = () => {
     <div>
       <h2 className="text-2xl font-bold mb-8 mt-12 text-center">My Bookings</h2>
       <div className="overflow-x-auto">
-        <table className="table">
+        <table className="table ">
           {/* head */}
           <thead>
             <tr>

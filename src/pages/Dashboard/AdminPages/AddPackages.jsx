@@ -59,7 +59,7 @@ const AddPackages = () => {
 
   return (
     <div>
-      <div className="w-full max-w-xl mx-auto my-12 p-4 bg-slate-300 border border-gray-200  shadow-2xl shadow-slate-600 sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700 ">
+      <div className="mx-4 lg:w-full max-w-xl md:mx-auto my-12 p-4 bg-slate-300 border border-gray-200  shadow-2xl shadow-slate-600  ">
         <h5 className="text-2xl font-bold text-gray-700 dark:text-white text-center">
           Add Packages
         </h5>

@@ -1,4 +1,5 @@
-import logo from '../../public/logo.png'
+import { Link } from "react-router-dom";
+import logo from "../../public/logo.png";
 
 const Footer = () => {
   return (
@@ -8,14 +9,14 @@ const Footer = () => {
         <div className="px-8">
           <div className="flex flex-col md:flex-row justify-between items-center mb-6">
             <div className=" flex  items-center gap-4 mb-4 md:mb-0">
-                <div className='w-24 '>
-                    <img className='rounded-full' src={logo} alt="" />
-                </div>
-              <div >
-              <h2 className="text-2xl font-bold">Tourismo</h2>
-              <p className="text-gray-400">
-                Your Gateway to Unforgettable Travels
-              </p>
+              <div className="w-24 ">
+                <img className="rounded-full" src={logo} alt="" />
+              </div>
+              <div>
+                <h2 className="text-2xl font-bold">Tourismo</h2>
+                <p className="text-gray-400">
+                  Your Gateway to Unforgettable Travels
+                </p>
               </div>
             </div>
             <div className="flex space-x-6">
@@ -55,29 +56,29 @@ const Footer = () => {
               <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-2">
                 <li>
-                  <a href="/" className="hover:underline">
+                  <Link to={"/"} className="hover:underline">
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/about" className="hover:underline">
+                  <Link to={"/about-us"} className="hover:underline">
                     About Us
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/packages" className="hover:underline">
+                  <Link to={"/all-packages"} className="hover:underline">
                     Our Packages
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/contact" className="hover:underline">
+                  <Link to={"/contact-us"} className="hover:underline">
                     Contact Us
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/community" className="hover:underline">
+                  <Link to={"/community"} className="hover:underline">
                     Community
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

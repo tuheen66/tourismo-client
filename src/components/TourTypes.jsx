@@ -32,10 +32,7 @@ const TourTypes = () => {
 
       <div className="my-12 flex flex-wrap justify-center gap-12">
         {packages.map((item) => (
-          <div
-            key={item.id}
-            
-          >
+          <div key={item.id}>
             <Link to={`/tour-type/${item.tourType}`}>
               <div className=" py-6 px-8 flex flex-col items-center border-2 border-slate-400 rounded-full ">
                 <img className="w-24 " src={item.image} alt="" />

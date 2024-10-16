@@ -24,8 +24,9 @@ const AboutUs = () => {
           </h2>
         </div>
       </div>
-      <section className="bg-gray-100 py-12">
-        <div className="container mx-auto px-4">
+
+      <section className=" py-12">
+        <div className="">
           {/* Section 1: Introduction */}
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-gray-800 mb-4">
@@ -38,7 +39,7 @@ const AboutUs = () => {
           </div>
 
           {/* Section 2: Mission */}
-          <div className="flex flex-col lg:flex-row items-center mb-12">
+          <div className="flex flex-col lg:flex-row items-center mb-12 px-2">
             <div className="lg:w-1/2 mb-6 lg:mb-0">
               <img
                 src={mission}
@@ -60,7 +61,7 @@ const AboutUs = () => {
           </div>
 
           {/* Section 3: Meet Our Team */}
-          <div className="flex flex-col lg:flex-row items-center mb-12">
+          <div className="flex flex-col lg:flex-row items-center mb-12 gap-4 px-2">
             <div className="lg:w-1/2 lg:pr-12">
               <h2 className="text-3xl font-semibold text-gray-800 mb-4">
                 Meet Our Team
@@ -82,8 +83,8 @@ const AboutUs = () => {
           </div>
 
           {/* Section 4: Why Choose Us */}
-          <div className="py-12 bg-white">
-            <div className="container mx-auto px-4">
+          <div className="">
+            <div className="">
               <h2 className="text-3xl font-semibold text-gray-800 text-center mb-6">
                 Why Choose Tourismo?
               </h2>

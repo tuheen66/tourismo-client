@@ -46,7 +46,7 @@ const DetailPackage = () => {
   const { data: users = [], reset } = useQuery({
     queryKey: ["users", user?.email],
     queryFn: async () => {
-      const res = await axiosPublic.get(`/users/${user?.email}`);
+      const res = await axiosPublic.get(`/user/${user?.email}`);
       return res.data;
     },
   });
@@ -99,8 +99,8 @@ const DetailPackage = () => {
         {tripTitle}{" "}
       </h2>
 
-      <div className="flex mb-12 bg-green-200 p-12 rounded-xl">
-        <div className="flex-1">
+      <div className="flex flex-col lg:flex-row mb-12 bg-green-200 lg:p-12 rounded-xl">
+        <div className="flex-1 p-2">
           <div>
             <img
               className="rounded-xl shadow-xl shadow-slate-600"
@@ -150,12 +150,14 @@ const DetailPackage = () => {
 
       {/* ================= Book a tour =============== */}
 
-      <div className="flex justify-between items-center gap-12">
-        <div className="flex-1 w-full max-w-xl mx-auto my-12 p-4 bg-slate-300 border border-gray-200  shadow-2xl shadow-slate-600 sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700 rounded-xl ">
+      <div className="lg:flex lg:justify-between lg:items-center lg:gap-12 my-12">
+        <div className="lg:flex-1 lg:w-full  lg:mx-auto lg:my-12 p-4 bg-slate-300 border border-gray-200  shadow-2xl shadow-slate-600 rounded-lg ">
           <h5 className="text-2xl font-bold text-gray-700 dark:text-white text-center">
             Book a Tour
           </h5>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit}
+          className=""
+          >
             {/* ------------ name ---------------- */}
 
             <div>
@@ -294,7 +296,7 @@ const DetailPackage = () => {
 
         <div className="flex-1 ">
           <img
-            className="w-[80%] mx-auto rounded-xl shadow-xl shadow-slate-500"
+            className="w-[80%] mx-auto rounded-xl shadow-xl hidden lg:block shadow-slate-500"
             src={booking}
             alt=""
           />

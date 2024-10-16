@@ -11,7 +11,7 @@ import sustain from '../../../assets/images/sustain.jpg'
 const Overview = () => {
   return (
     <div>
-      <div className="bg-gray-100 min-h-screen p-6">
+      <div className="bg-gray-100 min-h-screen lg:p-6">
             {/* Header Section */}
             <div className="text-center py-8">
               <h1 className="text-3xl font-bold text-gray-800">An Overview of our project</h1>
@@ -34,7 +34,7 @@ const Overview = () => {
               <img
                 src={mission}
                 alt="Our Mission"
-                className="w-full h-96 object-cover object-center rounded-lg mt-6"
+                className="w-full lg:h-96 object-cover object-center rounded-lg mt-6"
               />
             </div>
 
@@ -54,7 +54,7 @@ const Overview = () => {
               <img
                 src={story}
                 alt="Our Story"
-                className="w-full h-96 object-cover rounded-lg mt-6"
+                className="w-full lg:h-96 object-cover rounded-lg mt-6"
               />
             </div>
 
@@ -144,7 +144,7 @@ const Overview = () => {
               <img
                 src={community}
                 alt="Community Engagement"
-                className="w-full h-96 object-cover rounded-lg mt-6"
+                className="w-full lg:h-96 object-cover rounded-lg mt-6"
               />
             </div>
 
@@ -162,7 +162,7 @@ const Overview = () => {
               <img
                 src={explore}
                 alt="Ready to Explore"
-                className="w-full h-96 object-cover rounded-lg mt-6"
+                className="w-full lg:h-96 object-cover rounded-lg mt-6"
               />
             </div>
           </div>

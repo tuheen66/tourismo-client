@@ -29,7 +29,7 @@ const ReviewCards = () => {
     <div>
       <div></div>
 
-      <div className="p-4">
+      <div className="lg:p-4">
         <Swiper
           autoplay={{
             delay: 2500,
@@ -43,7 +43,7 @@ const ReviewCards = () => {
           {reviews.map((review) => (
             <SwiperSlide key={review._id}>
               <div
-                className="space-y-4 bg-slate-300 px-16 py-8 rounded-full"
+                className="space-y-4 bg-slate-300 px-8 py-16 md:px-16 md:py-8 rounded-full"
                 key={review._id}
               >
                 <div className="flex items-center gap-4 mb-4 justify-center">

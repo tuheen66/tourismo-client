@@ -258,8 +258,9 @@ const AddGuideProfile = () => {
             />
           </div>
 
-          <Button text="Submit" type="submit"></Button>
-          <button type="submit" />
+          <button className="btn px-6 bg-[#d35400] text-white  hover:text-blue-500 hover:bg-orange-400">
+                  Update 
+                </button>
         </form>
       </div>
     </div>

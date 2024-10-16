@@ -171,10 +171,10 @@ const Navbar = () => {
               {navItems}
             </ul>
           </div>
-          <img className="w-16 rounded-full" src={logo} alt="" />
+          <img className="w-12 md:w-16 rounded-full" src={logo} alt="" />
           <Link
             to="/"
-            className="btn btn-ghost text-2xl uppercase font-bold text-[#3a0a24]"
+            className="btn btn-ghost text-xl md:text-2xl uppercase font-bold text-[#3a0a24]"
           >
             Tourismo
           </Link>
@@ -187,7 +187,6 @@ const Navbar = () => {
           <>
             <div className=" navbar-end ">
               <div className="  dropdown dropdown-end">
-               
                 <div tabIndex={0} className="m-1 ">
                   <img
                     className="w-16 rounded-full"
@@ -208,9 +207,7 @@ const Navbar = () => {
                       <NavLink to="dashboard/my-profile">Dashboard</NavLink>
                     )}
                   </li>
-                  <li className="text-[#374177]">
-                    <a>Offer Announcements</a>
-                  </li>
+                 
                   <li className=" text-[#374177]">
                     <p>
                       <span className="font-semibold">Name:</span>
@@ -239,7 +236,7 @@ const Navbar = () => {
           <>
             <div className="navbar-end">
               <Link to="/login">
-                <button className="btn px-6 bg-[#d35400] text-white  hover:text-blue-500 hover:bg-orange-400">
+                <button className="btn px-6 mr-4 bg-[#d35400] text-white  hover:text-blue-500 hover:bg-orange-400 rounded-full">
                   Sign In
                 </button>
               </Link>

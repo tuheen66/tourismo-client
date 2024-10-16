@@ -16,7 +16,7 @@ const Blogs = () => {
   return (
     <div>
        <div
-        className="mx-auto min-h-[200px] md:min-h-[300px] lg:min-h-[450px] rounded-xl bg-cover bg-center"
+        className="mx-auto min-h-[250px] md:min-h-[350px] lg:min-h-[450px] rounded-xl bg-cover bg-center"
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${blog})`,
         }}
@@ -27,7 +27,7 @@ const Blogs = () => {
           </h2>
         </div>
       </div>
-      <div className="container mx-auto px-4 py-8 grid gap-8 grid-cols-1 md:grid-cols-3">
+      <div className="container mx-auto px-4 py-8 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
       {blogs.map((blog, index) => (
         <div
           key={index}
