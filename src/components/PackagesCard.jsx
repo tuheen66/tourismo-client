@@ -67,9 +67,10 @@ const PackagesCard = ({ destination }) => {
           </Link>
         </div>
       </div>
-      <button onClick={() => handleWishlist(_id)} className="">
+      {user &&  <button onClick={() => handleWishlist(_id)} className="">
         <FaHeart className="absolute top-5 right-5 text-3xl text-red-600 hover:scale-125 duration-500"></FaHeart>
-      </button>
+      </button> }
+     
     </div>
   );
 };

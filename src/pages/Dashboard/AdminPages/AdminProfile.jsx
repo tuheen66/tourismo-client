@@ -29,7 +29,7 @@ const AdminProfile = () => {
         <span className="font-semibold ">Email : </span>
         {users.email}
       </p>
-      {users.role}
+      
     </div>
   );
 };
