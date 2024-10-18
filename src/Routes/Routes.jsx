@@ -69,7 +69,7 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/packages/${params.id}`),
+          fetch(`https://tourismo-server.vercel.app/packages/${params.id}`),
       },
 
       {
@@ -81,13 +81,15 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/guides/${params.id}`),
+          fetch(`https://tourismo-server.vercel.app/guides/${params.id}`),
       },
       {
         path: "/tour-type/:tourType",
         element: <TourType></TourType>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/package/${params.tourType}`),
+          fetch(
+            `https://tourismo-server.vercel.app/package/${params.tourType}`
+          ),
       },
     ],
   },
