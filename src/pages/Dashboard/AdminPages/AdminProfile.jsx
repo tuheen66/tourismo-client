@@ -1,11 +1,10 @@
-
 import { useQuery } from "@tanstack/react-query";
 import useAxiosPublic from "../../../hooks/useAxiosPublic";
 import { useContext } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
 
 const AdminProfile = () => {
-    const { user } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
 
   const axiosPublic = useAxiosPublic();
 
@@ -23,16 +22,14 @@ const AdminProfile = () => {
       <img className="w-40" src={users.image || user.photoURL} alt="" />
       <p className="text-lg">
         <span className="font-semibold ">Name : </span>
-        {users.name}
+        {user.displayName}
       </p>
       <p className="text-lg">
         <span className="font-semibold ">Email : </span>
-        {users.email}
+        {user.email}
       </p>
-      
     </div>
   );
 };
-   
 
 export default AdminProfile;
